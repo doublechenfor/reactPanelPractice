@@ -4,6 +4,7 @@ import Card from '../components/card'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchNoteDetailsFromCloud } from './action'
 import { useQuery, useQueryClient } from "@tanstack/react-query"
+import { NUM_PAGE } from './home.constant.ts'
 
 function Home() {
     const [currentPricingData, setCurrentPricingData] = useState({
@@ -50,29 +51,30 @@ function Home() {
         if (!data) {
             return;
         }
-        const pricing = data['pricing'].slice((currentPricingData.currentPage - 1) * 10, currentPricingData.currentPage * 10)
-        const subscription = data['subscription'].slice((currentSubscriptionData.currentPage - 1) * 10, currentSubscriptionData.currentPage * 10)
-        const executed = data['executed'].slice((currentExecutedData.currentPage - 1) * 10, currentExecutedData.currentPage * 10)
-        const maintenance = data['maintenance'].slice((currentMaintenanceData.currentPage - 1) * 10, currentMaintenanceData.currentPage * 10)
+        const pricing = data['pricing'].slice((currentPricingData.currentPage - 1) * NUM_PAGE, currentPricingData.currentPage * NUM_PAGE)
+        const subscription = data['subscription'].slice((currentSubscriptionData.currentPage - 1) * NUM_PAGE, currentSubscriptionData.currentPage * NUM_PAGE)
+        const executed = data['executed'].slice((currentExecutedData.currentPage - 1) * NUM_PAGE, currentExecutedData.currentPage * NUM_PAGE)
+        const maintenance = data['maintenance'].slice((currentMaintenanceData.currentPage - 1) * NUM_PAGE, currentMaintenanceData.currentPage * NUM_PAGE)
+
         setCurrentPricingData({
             data: pricing,
             currentPage: currentPricingData.currentPage,
-            total: Math.ceil(data['pricing'].length / 10)
+            total: Math.ceil(data['pricing'].length / NUM_PAGE)
         })
         setCurrentSubscriptionData({
             data: subscription,
             currentPage: currentSubscriptionData.currentPage,
-            total: Math.ceil(data['subscription'].length / 10)
+            total: Math.ceil(data['subscription'].length / NUM_PAGE)
         })
         setCurrentExecutedData({
             data: executed,
             currentPage: currentExecutedData.currentPage,
-            total: Math.ceil(data['executed'].length / 10)
+            total: Math.ceil(data['executed'].length / NUM_PAGE)
         })
         setCurrentMaintenanceData({
             data: maintenance,
             currentPage: currentMaintenanceData.currentPage,
-            total: Math.ceil(data['maintenance'].length / 10)
+            total: Math.ceil(data['maintenance'].length / NUM_PAGE)
         })
     }, [data, currentExecutedData.currentPage,
         currentMaintenanceData.currentPage, currentPricingData.currentPage, currentSubscriptionData.currentPage, isLoading])
@@ -85,28 +87,28 @@ function Home() {
     const setCurrentData = (page, title) => {
         switch (title) {
             case 'pricing':
-                const pricing = data['pricing'].slice((page - 1) * 10, page * 10)
+                const pricing = data['pricing'].slice((page - 1) * NUM_PAGE, page * NUM_PAGE)
                 setCurrentPricingData({
                     currentPage: page,
                     data: pricing
                 })
                 break;
             case 'subscription':
-                const subscription = data['subscription'].slice((page - 1) * 10, page * 10)
+                const subscription = data['subscription'].slice((page - 1) * NUM_PAGE, page * NUM_PAGE)
                 setCurrentSubscriptionData({
                     currentPage: page,
                     data: subscription
                 })
                 break;
             case 'executed':
-                const executed = data['executed'].slice((page - 1) * 10, page * 10)
+                const executed = data['executed'].slice((page - 1) * NUM_PAGE, page * NUM_PAGE)
                 setCurrentExecutedData({
                     currentPage: page,
                     data: executed
                 })
                 break;
             case 'maintenance':
-                const maintenance = data['maintenance'].slice((page - 1) * 10, page * 10)
+                const maintenance = data['maintenance'].slice((page - 1) * NUM_PAGE, page * NUM_PAGE)
                 setCurrentMaintenanceData({
                     currentPage: page,
                     data: maintenance
