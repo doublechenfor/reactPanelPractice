@@ -1,0 +1,59 @@
+.containerCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.wrapperPricing {
+    display: flex;
+    flex-direction: row;
+}
+.wrapperPricingLabel {
+    margin-right: 10px;
+}
+.wrapperPricingModel {
+    position: fixed;
+    left: calc(50% - 250px);
+    top: calc(50% - 150px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    padding: 5px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+}
+.noteDetailsHeader {
+    font-weight: 600;
+    font-size: 26px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000000;
+}
+.noteDetailsBody {
+    padding: 5px 0;
+}
+.noteDetailsFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 5px 0;
+    &>:first-child {
+        margin-right: 10px;
+    }
+    span {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #000000;
+        border-radius: 4px;
+    }
+}

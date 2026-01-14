@@ -1,0 +1,95 @@
+{
+    "success": "true",
+    "data": {
+        "pricing":  [
+            {
+                "pr": "1234",
+                "strikeDate": "2025-08-10 12:00:00",
+                "tenor": "12D",
+                "payoff": "equity",
+                "type": "down",
+                "downPrice": 12.18,
+                "putPrice": 200.25,
+                "maturityDate": "2026-08-10 12:00:00",
+                "foundDate": "2025-10-10 12:00:00"
+            },
+            {
+                "pr": "1235",
+                "strikeDate": "2025-08-10 12:00:00",
+                "tenor": "12D",
+                "payoff": "equity",
+                "type": "down",
+                "downPrice": 12.18,
+                "putPrice": 200.25,
+                "maturityDate": "2026-08-10 12:00:00",
+                "foundDate": "2025-10-10 12:00:00"
+            },
+            {
+                "pr": "1236",
+                "strikeDate": "2025-08-10 12:00:00",
+                "tenor": "12D",
+                "payoff": "equity",
+                "type": "down",
+                "downPrice": 12.18,
+                "putPrice": 200.25,
+                "maturityDate": "2026-08-10 12:00:00",
+                "foundDate": "2025-10-10 12:00:00"
+            },
+            {
+                "pr": "1237",
+                "strikeDate": "2025-08-10 12:00:00",
+                "tenor": "12D",
+                "payoff": "equity",
+                "type": "down",
+                "downPrice": 12.18,
+                "putPrice": 200.25,
+                "maturityDate": "2026-08-10 12:00:00",
+                "foundDate": "2025-10-10 12:00:00"
+            },
+            {
+                "pr": "1238",
+                "strikeDate": "2025-08-10 12:00:00",
+                "tenor": "12D",
+                "payoff": "equity",
+                "type": "down",
+                "downPrice": 12.18,
+                "putPrice": 200.25,
+                "maturityDate": "2026-08-10 12:00:00",
+                "foundDate": "2025-10-10 12:00:00"
+            },
+            {
+                "pr": "1239",
+                "strikeDate": "2025-08-10 12:00:00",
+                "tenor": "12D",
+                "payoff": "equity",
+                "type": "down",
+                "downPrice": 12.18,
+                "putPrice": 200.25,
+                "maturityDate": "2026-08-10 12:00:00",
+                "foundDate": "2025-10-10 12:00:00"
+            },
+            {
+                "pr": "1230",
+                "strikeDate": "2025-08-10 12:00:00",
+                "tenor": "12D",
+                "payoff": "equity",
+                "type": "down",
+                "downPrice": 12.18,
+                "putPrice": 200.25,
+                "maturityDate": "2026-08-10 12:00:00",
+                "foundDate": "2025-10-10 12:00:00"
+            },
+            {
+                "pr": "1231",
+                "strikeDate": "2025-08-10 12:00:00",
+                "tenor": "12D",
+                "payoff": "equity",
+                "type": "down",
+                "downPrice": 12.18,
+                "putPrice": 200.25,
+                "maturityDate": "2026-08-10 12:00:00",
+                "foundDate": "2025-10-10 12:00:00"
+            }
+        ]
+    }
+}

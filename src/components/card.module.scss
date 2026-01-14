@@ -1,0 +1,40 @@
+.wrapperCard {
+    width: 400px;
+    height: 250px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 12px;
+    padding: 8px 12px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.header {
+    height: 20px;
+    padding: 3px 5px;
+    border-bottom: blue 1px solid;
+    &>p {
+        font-weight: 800;
+        margin: 0px;
+    }
+}
+.body {
+    padding: 3px 5px;
+    height: 174px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.footer {
+    height: 50px;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    .footerRight {
+        button {
+            width: 50px;
+            height: 30px;
+        }
+        :first-child {
+            margin-right: 10px;
+        }
+    }
+}

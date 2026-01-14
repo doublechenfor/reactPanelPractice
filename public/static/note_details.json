@@ -1,0 +1,14 @@
+{
+    "success": "true",
+    "data": {
+        "pr": "1234",
+        "strikeDate": "2025-08-10 12:00:00",
+        "tenor": "3333D",
+        "payoff": "equity",
+        "type": "down",
+        "downPrice": 12.18,
+        "putPrice": 200.25,
+        "maturityDate": "2026-08-10 12:00:00",
+        "foundDate": "2025-10-10 12:00:00"
+    }
+}
